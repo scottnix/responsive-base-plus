@@ -1,0 +1,146 @@
+// Susy Grids - Global Default http://susydocs.oddbird.net/en/latest/settings/
+
+$susy: (
+  columns: 12,
+  gutters: 1,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+
+);
+
+.site-wrapper {
+    @include container(75em); // set susy grid container
+    margin: $spacing-delta auto;
+    padding: 0 $spacing-beta;
+}
+.site-header {
+
+    @include breakpoint(large) {
+        @include span(full);
+    }
+
+}
+.site-main {
+}
+.content-wrapper {
+
+	@include breakpoint(large) {
+	    @include span(8);
+	}
+}
+.primary-aside,
+.secondary-aside {
+
+    @include breakpoint(large) {
+        @include span(last 4);
+        clear: right;
+    }
+}
+.site-footer {
+    @include break;
+
+    @include breakpoint(large) {
+    //    @include span(full);
+    }
+}
+[id="subsidiary"] {
+    @include break;
+    overflow: hidden;
+}
+.first-sub-aside,
+.second-sub-aside,
+.third-sub-aside {
+
+    @include breakpoint(large) {
+        @include span(4);
+    }
+}
+[id="siteinfo"] {
+    @include span(full);
+}
+
+// grouping common layout specific properties identified above
+
+.site-header,
+.branding,
+.content-wrapper,
+.site-footer,
+[id="subsidiary"] {
+    margin-bottom: $spacing-delta;
+}
+
+// page templates
+// ==========================================================================
+
+// left sidebar template, there is no right because it is the default above
+.left-sidebar {
+    .content-wrapper {
+
+        @include breakpoint(large) {
+            @include span(last 8);
+        }
+    }
+    .primary-aside,
+    .secondary-aside {
+
+        @include breakpoint(large) {
+            @include span(4);
+            clear: left;
+        }
+    }
+}
+
+// fullwidth template overrides
+.full-width {
+    .content-wrapper {
+
+        @include breakpoint(medium) {
+            @include span(full);
+            @include pad(1,1);
+        }
+        @include breakpoint(large) {
+            @include span(full);
+            @include pad(2,2);
+        }
+    }
+}
+
+// three column layout (double right sidebar)
+.three-columns {
+    .content-wrapper {
+
+        @include breakpoint(large) {
+            @include span(6);
+        }
+    }
+    .primary-aside {
+
+        @include breakpoint(medium) {
+            @include span(6);
+        }
+        @include breakpoint(large) {
+            @include span(3);
+        }
+    }
+    .secondary-aside {
+        @include breakpoint(medium) {
+            @include span(last 6);
+        }
+        @include breakpoint(large) {
+            @include span(last 3);
+        }
+    }
+}
+
+// attachments template overrides
+.single-attachment {
+    .content-wrapper {
+        @include span(full);
+    }
+    .primary-aside,
+    .secondary-aside,
+    .comment-respond {
+        display: none;
+    }
+}

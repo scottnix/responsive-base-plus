@@ -1,0 +1,43 @@
+// link and archive templates
+[id="links-page"],
+[id="archives-page"] {
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+}
+.content-column {
+    margin: 0 0 $spacing;
+    h2 {
+        @extend h6;
+    }
+
+    @include breakpoint(medium) {
+        float: left;
+        width: 50%;
+    }
+}
+
+// author biography template, in thematic options
+// using this feature exposes authors email address
+[id="author-info"] {
+    overflow: hidden;
+    margin: 0 0 $spacing;
+    .avatar {
+        float: left;
+        margin: 0 0 0 $spacing-beta;
+    }
+}
+
+// 404 error page
+.error404 {
+    input[type="submit"] {
+        float: none;
+    }
+}
+
+// search page, specifically no results
+.search-no-results {
+    input[type="submit"] {
+        float: none;
+    }
+}

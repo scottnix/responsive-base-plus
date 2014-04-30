@@ -1,0 +1,85 @@
+.entry-content {
+    .wp-post-image {
+        display: block;
+        margin: 0 0 $spacing;
+    }
+    img {
+        height: auto;
+        max-width: 100%;
+        margin: 0 0 $spacing;
+        border: thick solid $accent-color;
+    }
+
+    @include breakpoint(medium) {
+        .wp-post-image {
+            float: right;
+            width: auto;
+            margin: 0 0 $spacing $spacing;
+        }
+    }
+}
+.alignleft,
+img.alignleft {
+    float: left;
+    margin-right: $spacing-beta;
+}
+.alignright,
+img.alignright {
+    float: right;
+    margin-left: $spacing-beta;
+}
+.aligncenter,
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+.wp-caption {
+    max-width: 100%;
+    margin-bottom: $spacing;
+    text-align:center;
+    img {
+        margin: 0;
+        padding: 0;
+    }
+}
+.wp-caption-text {
+    margin: 0;
+    padding: 0 $spacing-beta $spacing;
+    font-size: 90%;
+}
+.gallery {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 0 $spacing;
+    clear: both;
+}
+.gallery-row {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    clear: both;
+}
+.gallery-item {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    img {
+        height: auto;
+        margin: 0 auto;
+        border: thick solid $accent-color !important;
+    }
+}
+.gallery-icon {
+    margin: 0 .25em;
+}
+.gallery-caption {
+
+}
+.wp-smiley {
+    max-height: 12px;
+    margin: 0 !important;
+}

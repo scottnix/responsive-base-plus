@@ -1,0 +1,129 @@
+/*!
+Theme Name: Responsive Base Plus
+Theme URI: http://scottnix.com/
+Description: Responsive Base version of new theme for Thematic 2.0.
+Author: Scott Nix
+Author URI: http://scottnix.com/
+Template: thematic
+Version: 0.1.0
+Tags: thematic, child, responsive
+*/
+
+
+// ==========================================================================
+// load supporting files (compass, variables, mixins)
+// ==========================================================================
+
+@import 'base';
+
+/* ==========================================================================
+   basic single element styles (headers, links, etc.)
+   ========================================================================== */
+
+@import 'elements';
+
+/* ==========================================================================
+   theme fonts
+   ========================================================================== */
+
+@import 'fonts';
+
+/* ==========================================================================
+   layout structure
+   ========================================================================== */
+
+ @import 'layouts/defaults';
+
+/* ==========================================================================
+   content styles
+   ========================================================================== */
+
+.site-title {
+    @extend h2;
+    margin: 0;
+    padding: 0;
+}
+.tagline {
+    margin: 0;
+    font-family: $body-font;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: $spacing;
+    text-shadow: none;
+}
+.content-wrapper {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.post {
+  margin: 0 0 $spacing;
+  padding: 0 0 $spacing-delta;
+}
+.page-title {
+    @extend h6;
+}
+.entry-title {
+    @extend h1;
+}
+.entry-meta {
+  margin: 0 0 $spacing;
+}
+.sticky {
+  padding: $spacing;
+  background: $transparency-medium;
+}
+
+/* asides, sidebars & widget-ready areas
+   ========================================================================== */
+
+@import 'asides';
+
+/* images
+   ========================================================================== */
+
+@import 'images';
+
+/* navigational elements and buttons
+   ========================================================================== */
+
+@import 'navigation-buttons-and-forms';
+
+/* comments
+   ========================================================================== */
+
+@import 'comments';
+
+/* specific pages and templates
+   ========================================================================== */
+
+@import 'pages-and-templates';
+
+/* internet explorer (old IE, 6, 7 and 8 fixes)
+   ========================================================================== */
+
+@import 'internet-explorer';
+
+/* plugins
+   ========================================================================== */
+
+@import 'plugins';
+
+// helper classes - html5boilerplate.com (setup as Sass placeholders)
+// ==========================================================================
+
+@import 'helper-classes';
+
+/* ==========================================================================
+   print styles - html5boilerplate.com
+   ========================================================================== */
+
+@media print {
+    @import 'print-styles';
+
+    // custom additions
+    [id="access"],
+    .aside,
+    .navigation {
+        display: none;
+    }
+}

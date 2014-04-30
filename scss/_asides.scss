@@ -1,0 +1,29 @@
+.aside {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    ul,
+    section {
+        padding: 0;
+        margin: 0 0 $spacing;
+        list-style: none;
+        ul {
+            ul {
+                margin: 0 0 0 $spacing-alpha;
+            }
+        }
+    }
+    img,
+    select {
+        height: auto;
+        max-width: 100%;
+    }
+    [id="searchform"] input {
+        width: 100%;
+    }
+    [id="searchsubmit"] {
+        display: none;
+    }
+    .site-content & {
+        margin: 0 0 $spacing;
+    }
+}
