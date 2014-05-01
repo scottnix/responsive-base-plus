@@ -4,6 +4,9 @@
     position: relative;
     float: right;
     padding: $spacing-alpha $spacing-delta $spacing-alpha $spacing-alpha;
+    &:focus {
+        outline: none;
+    }
     &:before,
     &:after {
         content: "";
@@ -66,7 +69,8 @@
         padding: $spacing-alpha;
         background: $transparency-medium;
         &:hover {
-            background: $body-color;
+            background: $transparency-dark;
+            color: $body-color;
         }
     }
     .children {
@@ -182,7 +186,8 @@ input[type="submit"] {
     text-align: center;
     transition: all .5s ease-in-out;
     &:hover {
-        background: $body-color;
+        background: $transparency-dark;
+        color: $body-color;
     }
 }
 .navigation {
@@ -219,12 +224,13 @@ input[type="submit"] {
         padding: 0.4em 0.65em;
         background: $transparency-medium;
         &:hover {
-            background: $body-color;
+            background: $transparency-dark;
+            color: $body-color;
         }
     }
     a,
     span {
-        margin-right: 0.5em;
+        margin-right: $spacing-alpha;
     }
 }
 .paginated-comments-links {
