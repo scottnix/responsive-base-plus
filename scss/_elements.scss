@@ -10,6 +10,7 @@ html {
 body {
     margin: 0;
     overflow-y: scroll;
+    background: $body-background;
     font-family: $body-font;
     font-size: 100%;
     color: $body-color;
