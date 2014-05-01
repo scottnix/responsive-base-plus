@@ -9,7 +9,7 @@ Version: 0.1.0
 Tags: thematic, child, responsive
 */
 /* ==========================================================================
-   basic single element styles (headers, links, etc.)
+   basic element styles (headings, links, etc.)
    ========================================================================== */
 *,
 *:before,
@@ -27,6 +27,7 @@ html {
 body {
   margin: 0;
   overflow-y: scroll;
+  background: #fefefe;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 100%;
   color: #3d3331;
@@ -87,20 +88,20 @@ h6, .page-title, .content-column h2, .content-column .site-title {
 
 a {
   background: transparent;
-  color: #da1113;
+  color: #bb1315;
   text-decoration: none;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 a:visited {
-  color: #da1113;
+  color: #bb1315;
 }
 a:focus {
-  color: #f25f60;
+  color: #ec484a;
   outline: thin dotted;
 }
 a:active, a:hover {
-  color: #f25f60;
+  color: #ec484a;
 }
 
 img {
@@ -169,7 +170,7 @@ dfn {
 }
 
 ins {
-  border-bottom: thin solid #da1113;
+  border-bottom: thin solid #bb1315;
   text-decoration: none;
 }
 
@@ -182,7 +183,7 @@ blockquote {
 }
 blockquote p {
   padding: 1em 0 1em 1em;
-  border-left: thick solid #da1113;
+  border-left: thick solid #bb1315;
 }
 
 q {
@@ -236,7 +237,7 @@ hr {
 
 table {
   margin: 0 0 1.5em;
-  border: thin solid #da1113;
+  border: thin solid #bb1315;
   border-width: thin thin 0;
   border-collapse: collapse;
   border-spacing: 0;
@@ -244,7 +245,7 @@ table {
 }
 
 tr {
-  border-bottom: thin solid #da1113;
+  border-bottom: thin solid #bb1315;
 }
 
 th,
@@ -471,21 +472,6 @@ td {
   }
 }
 
-.single-attachment .content-wrapper {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 2.08333%;
-  padding-right: 2.08333%;
-}
-.single-attachment .primary-aside,
-.single-attachment .secondary-aside,
-.single-attachment .comment-respond {
-  display: none;
-}
-
 /* ==========================================================================
    content styles
    ========================================================================== */
@@ -563,7 +549,7 @@ td {
   height: auto;
   max-width: 100%;
   margin: 0 0 1.5em;
-  border: thick solid #da1113;
+  border: thick solid #bb1315;
 }
 @media (min-width: 30em) {
   .entry-content .wp-post-image {
@@ -606,7 +592,6 @@ img.aligncenter {
 .wp-caption-text {
   margin: 0;
   padding: 0 1em 1.5em;
-  font-size: 90%;
 }
 
 .gallery {
@@ -633,16 +618,11 @@ img.aligncenter {
 .gallery-item img {
   height: auto;
   margin: 0 auto;
-  border: thick solid #da1113 !important;
+  border: thick solid #bb1315 !important;
 }
 
 .gallery-icon {
   margin: 0 .25em;
-}
-
-.wp-smiley {
-  max-height: 12px;
-  margin: 0 !important;
 }
 
 /* navigational elements and buttons
@@ -651,6 +631,9 @@ img.aligncenter {
   position: relative;
   float: right;
   padding: 0.5em 2em 0.5em 0.5em;
+}
+.menu-toggle:focus {
+  outline: none;
 }
 .menu-toggle:before, .menu-toggle:after {
   content: "";
@@ -664,8 +647,8 @@ img.aligncenter {
   width: 1.1em;
   height: 1.2em;
   margin-top: 0.26316em;
-  -webkit-box-shadow: inset 0 3px #da1113, inset 0 7px #fefefe, inset 0 10px #da1113, inset 0 14px #fefefe, inset 0 17px #da1113;
-  box-shadow: inset 0 3px #da1113, inset 0 7px #fefefe, inset 0 10px #da1113, inset 0 14px #fefefe, inset 0 17px #da1113;
+  -webkit-box-shadow: inset 0 3px #bb1315, inset 0 7px #fefefe, inset 0 10px #bb1315, inset 0 14px #fefefe, inset 0 17px #bb1315;
+  box-shadow: inset 0 3px #bb1315, inset 0 7px #fefefe, inset 0 10px #bb1315, inset 0 14px #fefefe, inset 0 17px #bb1315;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -675,8 +658,8 @@ img.aligncenter {
   right: .6em;
   width: .8em;
   height: .5em;
-  -webkit-box-shadow: inset 0 3px #da1113;
-  box-shadow: inset 0 3px #da1113;
+  -webkit-box-shadow: inset 0 3px #bb1315;
+  box-shadow: inset 0 3px #bb1315;
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
@@ -719,7 +702,8 @@ img.aligncenter {
   background: rgba(0, 0, 0, 0.1);
 }
 .menu a:hover {
-  background: #3d3331;
+  background: rgba(0, 0, 0, 0.25);
+  color: #3d3331;
 }
 
 @media (min-width: 50em) {
@@ -738,7 +722,7 @@ img.aligncenter {
   }
 }
 fieldset {
-  border: thin solid #da1113;
+  border: thin solid #bb1315;
   margin: 0 0.5em;
   padding: 0.5em;
 }
@@ -844,7 +828,7 @@ input[type="submit"] {
   padding: 0.5em;
   border: none;
   background: rgba(0, 0, 0, 0.1);
-  color: #da1113;
+  color: #bb1315;
   cursor: pointer;
   text-align: center;
   -webkit-transition: all .5s ease-in-out;
@@ -853,7 +837,8 @@ input[type="submit"] {
 .button:hover,
 button:hover,
 input[type="submit"]:hover {
-  background: #3d3331;
+  background: rgba(0, 0, 0, 0.25);
+  color: #3d3331;
 }
 
 .navigation {
@@ -889,7 +874,8 @@ input[type="submit"]:hover {
 }
 .page-link a:hover,
 .comment-navigation a:hover {
-  background: #3d3331;
+  background: rgba(0, 0, 0, 0.25);
+  color: #3d3331;
 }
 .page-link a,
 .page-link span,
@@ -924,7 +910,7 @@ input[type="submit"]:hover {
 @media (min-width: 30em) {
   .comments .children {
     padding-left: 1.5em;
-    border-left: thick solid #da1113;
+    border-left: thick solid #bb1315;
   }
 }
 .comments .children .children {
@@ -935,7 +921,7 @@ input[type="submit"]:hover {
 .avatar {
   float: left;
   margin: 0 0.5em 1em 0;
-  border: thick solid #da1113;
+  border: thick solid #bb1315;
 }
 
 .comment-author {
@@ -946,7 +932,7 @@ input[type="submit"]:hover {
   clear: both;
 }
 .comment-content a {
-  border-bottom: thin dotted #da1113;
+  border-bottom: thin dotted #bb1315;
 }
 
 .comment-replylink {
@@ -1047,7 +1033,7 @@ video {
 
 /* plugins
    ========================================================================== */
-.menu .children, .comment-notes, .pings .comment-content, [id="form-allowed-tags"] {
+.wp-smiley, .menu .children, .comment-notes, .pings .comment-content, [id="form-allowed-tags"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1058,7 +1044,8 @@ video {
   width: 1px;
 }
 
-.menu .focusable.children:active, .focusable.comment-notes:active, .pings .focusable.comment-content:active, .focusable[id="form-allowed-tags"]:active,
+.focusable.wp-smiley:active, .menu .focusable.children:active, .focusable.comment-notes:active, .pings .focusable.comment-content:active, .focusable[id="form-allowed-tags"]:active,
+.focusable.wp-smiley:focus,
 .menu .focusable.children:focus,
 .focusable.comment-notes:focus,
 .pings .focusable.comment-content:focus,
