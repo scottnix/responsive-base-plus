@@ -1033,7 +1033,7 @@ video {
 
 /* plugins
    ========================================================================== */
-.wp-smiley, .menu .children, .comment-notes, .pings .comment-content, [id="form-allowed-tags"] {
+.wp-smiley, .menu .sub-menu, .comment-notes, .pings .comment-content, [id="form-allowed-tags"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1044,9 +1044,9 @@ video {
   width: 1px;
 }
 
-.focusable.wp-smiley:active, .menu .focusable.children:active, .focusable.comment-notes:active, .pings .focusable.comment-content:active, .focusable[id="form-allowed-tags"]:active,
+.focusable.wp-smiley:active, .menu .focusable.sub-menu:active, .focusable.comment-notes:active, .pings .focusable.comment-content:active, .focusable[id="form-allowed-tags"]:active,
 .focusable.wp-smiley:focus,
-.menu .focusable.children:focus,
+.menu .focusable.sub-menu:focus,
 .focusable.comment-notes:focus,
 .pings .focusable.comment-content:focus,
 .focusable[id="form-allowed-tags"]:focus {
