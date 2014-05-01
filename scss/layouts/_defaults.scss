@@ -1,12 +1,10 @@
 // Susy Grids - Global Default http://susydocs.oddbird.net/en/latest/settings/
-
 $susy: (
   columns: 12,
   gutters: 1,
   math: fluid,
   output: float,
   gutter-position: inside,
-
 );
 
 .site-wrapper {
@@ -19,9 +17,6 @@ $susy: (
     @include breakpoint(large) {
         @include span(full);
     }
-
-}
-.site-main {
 }
 .content-wrapper {
 
@@ -39,10 +34,6 @@ $susy: (
 }
 .site-footer {
     @include break;
-
-    @include breakpoint(large) {
-    //    @include span(full);
-    }
 }
 [id="subsidiary"] {
     @include break;
@@ -73,7 +64,7 @@ $susy: (
 // page templates
 // ==========================================================================
 
-// left sidebar template, there is no right because it is the default above
+// left sidebar layout, there is no right because it is the default above
 .left-sidebar {
     .content-wrapper {
 
@@ -91,7 +82,7 @@ $susy: (
     }
 }
 
-// fullwidth template overrides
+// fullwidth layout & full width page overrides
 .full-width {
     .content-wrapper {
 
@@ -124,23 +115,12 @@ $susy: (
         }
     }
     .secondary-aside {
+
         @include breakpoint(medium) {
             @include span(last 6);
         }
         @include breakpoint(large) {
             @include span(last 3);
         }
-    }
-}
-
-// attachments template overrides
-.single-attachment {
-    .content-wrapper {
-        @include span(full);
-    }
-    .primary-aside,
-    .secondary-aside,
-    .comment-respond {
-        display: none;
     }
 }
