@@ -10,7 +10,7 @@ $susy: (
 );
 
 .site-wrapper {
-    @include container(75em); // set susy grid container
+    @include container(70em); // set susy grid container
     margin: $spacing-delta auto;
     padding: 0 $spacing-beta;
 }
