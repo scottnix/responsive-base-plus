@@ -47,7 +47,6 @@ img.aligncenter {
 .wp-caption-text {
     margin: 0;
     padding: 0 $spacing-beta $spacing;
-    font-size: 90%;
 }
 .gallery {
     display: block;
@@ -80,6 +79,5 @@ img.aligncenter {
 
 }
 .wp-smiley {
-    max-height: 12px;
-    margin: 0 !important;
+    @extend %visuallyhidden;
 }
