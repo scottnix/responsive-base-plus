@@ -35,6 +35,8 @@ body {
 }
 @media (min-width: 30em) {
   body {
+    background: -webkit-linear-gradient(60deg, #e5e5e5, #fefefe);
+    background: linear-gradient(30deg, #e5e5e5, #fefefe);
     font-size: 105%;
   }
 }
@@ -266,9 +268,6 @@ td {
   text-shadow: none;
 }
 
-/* ==========================================================================
-   theme fonts
-   ========================================================================== */
 /* ==========================================================================
    layout structure
    ========================================================================== */
@@ -561,13 +560,13 @@ td {
 .alignleft,
 img.alignleft {
   float: left;
-  margin-right: 1em;
+  margin: 1.5em 1.5em 1.5em 0;
 }
 
 .alignright,
 img.alignright {
   float: right;
-  margin-left: 1em;
+  margin: 1.5em 0 1.5em 1.5em;
 }
 
 .aligncenter,
@@ -1031,6 +1030,8 @@ video {
 }
 
 /* plugins
+   ========================================================================== */
+/* helper classes
    ========================================================================== */
 .wp-smiley, .menu .sub-menu, .comment-notes, .pings .comment-content, [id="form-allowed-tags"] {
   border: 0;
