@@ -21,12 +21,12 @@
 .alignleft,
 img.alignleft {
     float: left;
-    margin-right: $spacing-beta;
+    margin: $spacing $spacing $spacing 0;
 }
 .alignright,
 img.alignright {
     float: right;
-    margin-left: $spacing-beta;
+    margin: $spacing 0 $spacing $spacing;
 }
 .aligncenter,
 img.aligncenter {
