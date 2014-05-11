@@ -17,6 +17,7 @@ body {
     line-height: 1.625;
 
     @include breakpoint(medium) {
+        background: linear-gradient(30deg, darken($body-background, 10%), $body-background);
         font-size: 105%;
     }
     @include breakpoint(large) {
