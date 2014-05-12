@@ -1,10 +1,10 @@
 // Susy Grids - Global Default http://susydocs.oddbird.net/en/latest/settings/
 $susy: (
-  columns: 12,
-  gutters: 1,
-  math: fluid,
-  output: float,
-  gutter-position: inside,
+    columns: 12,
+    gutters: 1,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
 );
 
 .site-wrapper {
@@ -20,9 +20,9 @@ $susy: (
 }
 .content-wrapper {
 
-	@include breakpoint(large) {
-	    @include span(8);
-	}
+    @include breakpoint(large) {
+        @include span(8);
+    }
 }
 .primary-aside,
 .secondary-aside {
