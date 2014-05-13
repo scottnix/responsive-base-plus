@@ -41,27 +41,22 @@
         transform: rotate(-360deg);
     }
 }
-.menu,
-.menu > ul ul {
+.menu {
     clear: both;
     transition: all 1s ease-in-out;
-}
-.js .menu,
-.js .menu > ul ul {
-    overflow: hidden;
-    max-height: 0;
-}
-.menu.active,
-.js .menu > ul ul.active {
-    max-height: 55em;
-}
-.menu {
-    ul {
+    .js & {
+        overflow: hidden;
+        max-height: 0;
+    }
+    &.active {
+        max-height: 55em;
+    }
+    .sf-menu {
         padding: 0;
         margin: 0;
         list-style: none;
     }
-    li {
+    .menu-item {
         border-bottom: thin solid $body-background;
     }
     a {
@@ -81,12 +76,12 @@
     .menu-toggle {
        display: none;
     }
-    .js .menu {
-        overflow: hidden;
-        max-height: none;
-    }
     .menu {
-        li {
+        .js & {
+            overflow: hidden;
+            max-height: none;
+        }
+        .menu-item {
             float: left;
             border: none;
         }
