@@ -16,17 +16,17 @@ Tags: thematic, child, responsive
 
 @import 'base';
 
-/* ==========================================================================
-   basic element styles (headings, links, etc.)
-   ========================================================================== */
-
-@import 'elements';
-
 // ==========================================================================
 // theme fonts
 // ==========================================================================
 
 @import 'fonts';
+
+/* ==========================================================================
+   basic element styles (headings, links, etc.)
+   ========================================================================== */
+
+@import 'elements';
 
 /* ==========================================================================
    layout structure
@@ -51,12 +51,12 @@ Tags: thematic, child, responsive
     line-height: $spacing;
 }
 .content-wrapper {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .post {
-  margin: 0 0 $spacing;
-  padding: 0 0 $spacing-delta;
+    margin: 0 0 $spacing;
+    padding: 0 0 $spacing-delta;
 }
 .page-title {
     @extend h6;
@@ -65,11 +65,11 @@ Tags: thematic, child, responsive
     @extend h1;
 }
 .entry-meta {
-  margin: 0 0 $spacing;
+    margin: 0 0 $spacing;
 }
 .sticky {
-  padding: $spacing;
-  background: $transparency-medium;
+    padding: $spacing;
+    background: $transparency-medium;
 }
 
 /* asides, sidebars & widget-ready areas
@@ -121,8 +121,7 @@ Tags: thematic, child, responsive
 
     // custom additions
     [id="access"],
-    .aside,
-    .navigation {
+    .aside {
         display: none;
     }
 }
