@@ -35,8 +35,6 @@ body {
 }
 @media (min-width: 30em) {
   body {
-    background: -webkit-linear-gradient(60deg, #e5e5e5, #fefefe);
-    background: linear-gradient(30deg, #e5e5e5, #fefefe);
     font-size: 105%;
   }
 }
@@ -114,7 +112,7 @@ p,
 address,
 figure,
 embed,
-.video-container {
+iframe {
   margin: 0 0 1.5em;
 }
 
@@ -668,30 +666,24 @@ img.aligncenter {
   transform: rotate(-360deg);
 }
 
-.menu,
-.menu > ul ul {
+.menu {
   clear: both;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-
-.js .menu,
-.js .menu > ul ul {
+.js .menu {
   overflow: hidden;
   max-height: 0;
 }
-
-.menu.active,
-.js .menu > ul ul.active {
+.menu.active {
   max-height: 55em;
 }
-
-.menu ul {
+.menu .sf-menu {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.menu li {
+.menu .menu-item {
   border-bottom: thin solid #fefefe;
 }
 .menu a {
@@ -713,8 +705,7 @@ img.aligncenter {
     overflow: hidden;
     max-height: none;
   }
-
-  .menu li {
+  .menu .menu-item {
     float: left;
     border: none;
   }
@@ -1132,8 +1123,7 @@ video {
   }
 
   [id="access"],
-  .aside,
-  .navigation {
+  .aside {
     display: none;
   }
 }
