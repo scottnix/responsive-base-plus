@@ -7,7 +7,7 @@ If you aren't using gulp, it is recommended to delete `package.json` and `gulpfi
 
 If you aren't using Sass, it is recommended to delete the `/scss/` folder.
 
-For more detailed information, please check my post
+For more detailed information, visit http://scottnix.com/responsive-base-plus/
 
 Demo
 -------------
