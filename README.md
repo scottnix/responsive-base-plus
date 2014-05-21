@@ -1,7 +1,7 @@
 Responsive Base Plus
 ===============
 
-This new version made for Thematic 2.0+ which is currently in beta. Responsive Base Plus is a solid starting point for creating custom responsive WordPress child themes for the Thematic Theme Framework. The theme was built for myself to use and is setup best for rapid development, however you may find it useful.
+Responsive Base Plus is a solid starting point for creating custom responsive WordPress child themes for the Thematic Theme Framework. The theme was built for my current workflow and rapid development, however you may find it useful. This new version is made for Thematic 2.0+ which is currently in beta.
 
 If you aren't using gulp, it is recommended to delete `package.json` and `gulpfile.js`.
 
@@ -13,6 +13,13 @@ Demo
 -------------
 
 http://scottnix.com/themes/responsive-base-plus/
+
+Thematic 2.0
+-------------
+
+You can find more information on Thematic 2.0 in the development branch on [Github](https://github.com/ThematicTheme/Thematic/tree/develop).
+
+Or just download it https://github.com/ThematicTheme/Thematic/archive/develop.zip
 
 Todo
 -------------
