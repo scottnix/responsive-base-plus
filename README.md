@@ -18,7 +18,7 @@ Todo
 -------------
 
 * Write up more documentation or quick tutorials as questions arise.
-* Comment CSS could be slightly better by making some the CSS less specific, it totally works fine but the nit-picky person in me knows it could be a little better.
+* Comment CSS could be slightly better by making the CSS less specific, it totally works fine but the nit-picky person in me knows it could be a little better.
 
 Contribute
 --------------
