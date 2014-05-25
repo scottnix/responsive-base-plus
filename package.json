@@ -1,7 +1,7 @@
 {
   "name": "responsive-base-plus",
   "version": "0.0.1",
-  "description": "Responsive Base Theme for Thematic",
+  "description": "Responsive Base Plus Child Theme for the Thematic Framework",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "~3.6.2",
