@@ -621,7 +621,7 @@ img.aligncenter {
   margin: 0 .25em;
 }
 
-/* navigational elements and buttons
+/* navigation main menu
    ========================================================================== */
 .menu-toggle {
   position: relative;
@@ -708,6 +708,8 @@ img.aligncenter {
     border: none;
   }
 }
+/* navigation, buttons and forms
+   ========================================================================== */
 fieldset {
   border: thin solid #bb1315;
   margin: 0 0.5em;
