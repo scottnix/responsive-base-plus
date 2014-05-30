@@ -1,0 +1,89 @@
+// Brad Frost Mobile Patterns - Skip Nav (nimus dropdwons)
+// http://codepen.io/bradfrost/pen/vljdx
+.menu-toggle {
+    position: relative;
+    float: right;
+    padding: $spacing-alpha $spacing-delta $spacing-alpha $spacing-alpha;
+    &:focus {
+        outline: none;
+    }
+    &:before,
+    &:after {
+        content: "";
+        box-sizing: content-box;
+        overflow: hidden;
+        position: absolute;
+        top: .5em;
+        right: .4em;
+        width: 1.1em;
+        height: 1.2em;
+        margin-top: $spacing-alpha/1.9;
+        box-shadow:
+            inset 0 3px $accent-color,
+            inset 0 7px $body-background,
+            inset 0 10px $accent-color,
+            inset 0 14px $body-background,
+            inset 0 17px $accent-color;
+        transition: all 1s ease-in-out;
+    }
+}
+.toggled {
+    &:before,
+    &:after {
+        top: .85em;
+        right: .6em;
+        width: .8em;
+        height: .5em;
+        box-shadow: inset 0 3px $accent-color;
+        transform: rotate(360deg);
+    }
+    &:after {
+        transform: rotate(-360deg);
+    }
+}
+.menu {
+    clear: both;
+    transition: all 1s ease-in-out;
+    .js & {
+        overflow: hidden;
+        max-height: 0;
+    }
+    &.active {
+        max-height: 55em;
+    }
+    .sf-menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .menu-item {
+        border-bottom: thin solid $body-background;
+    }
+    a {
+        display: block;
+        padding: $spacing-alpha;
+        background: $transparency-medium;
+        &:hover {
+            background: $transparency-dark;
+            color: $body-color;
+        }
+    }
+    .sub-menu {
+        @extend %visuallyhidden;
+    }
+}
+@include breakpoint(large) {
+    .menu-toggle {
+       display: none;
+    }
+    .menu {
+        .js & {
+            overflow: hidden;
+            max-height: none;
+        }
+        .menu-item {
+            float: left;
+            border: none;
+        }
+    }
+}

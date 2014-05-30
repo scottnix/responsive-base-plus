@@ -82,7 +82,12 @@ Tags: thematic, child, responsive
 
 @import 'images';
 
-/* navigational elements and buttons
+/* navigation main menu
+   ========================================================================== */
+
+@import 'navigation-main-menu';
+
+/* navigation, buttons and forms
    ========================================================================== */
 
 @import 'navigation-buttons-and-forms';
