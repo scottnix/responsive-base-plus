@@ -32,4 +32,4 @@ Contribute
 
 Anything to add? Improvements? Create an issue on GitHub.
 
-https://github.com/scottnix/responsive-base-pro/issues
+https://github.com/scottnix/responsive-base-plus/issues
