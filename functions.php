@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Force Thematic HTML5
+ *
+ * New Thematic feature that allows the child theme control of the HTML mode. This was previously
+ * controlled from inside the WordPress Admin.
+ *
+ * https://github.com/ThematicTheme/Thematic/pull/113
+ *
+ */
+
+add_theme_support( 'thematic_html5' );
+
+/**
  * Remove Thematic Menu JavaScript
  *
  * Removes the default Thematic JS scripts (Superfish) completely.
@@ -17,7 +29,8 @@ add_action('wp_enqueue_scripts','childtheme_remove_superfish', 9);
 /**
  * Script Manager
  *
- * Setup for adding and removing scripts and styling.
+ * Setup for adding and removing scripts and styling. The deregister styles & scripts sections can
+ * be used for conditional loading plugin scripts to only load where they are used.s
  *
  * Reference http://wpcandy.com/teaches/how-to-load-scripts-in-wordpress-themes/
  *
@@ -117,8 +130,8 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
  */
 
 function childtheme_register_menus() {
-    register_nav_menu( 'secondary-menu', 'Secondary Menu' );
-    register_nav_menu( 'tertiary-menu', 'Tertiary Menu' );
+    register_nav_menu('secondary-menu', 'Secondary Menu');
+    register_nav_menu('tertiary-menu', 'Tertiary Menu');
 }
 add_action('thematic_child_init', 'childtheme_register_menus');
 
@@ -131,15 +144,15 @@ add_action('thematic_child_init', 'childtheme_register_menus');
  *
  */
 
-function childtheme_hide_areas($content) {
-    unset($content['Index Top']);
-    unset($content['Index Insert']);
-    unset($content['Index Bottom']);
-    unset($content['Single Top']);
-    unset($content['Single Insert']);
-    unset($content['Single Bottom']);
-    unset($content['Page Top']);
-    unset($content['Page Bottom']);
+function childtheme_hide_areas( $content ) {
+    unset( $content['Index Top'] );
+    unset( $content['Index Insert'] );
+    unset( $content['Index Bottom'] );
+    unset( $content['Single Top'] );
+    unset( $content['Single Insert'] );
+    unset( $content['Single Bottom'] );
+    unset( $content['Page Top'] );
+    unset( $content['Page Bottom'] );
     return $content;
 }
 add_filter('thematic_widgetized_areas', 'childtheme_hide_areas');
@@ -160,7 +173,7 @@ function childtheme_override_access() {
         <a class="menu-toggle" href="#">Menu</a>
         <?php
         if ( ( function_exists( 'has_nav_menu' ) ) && ( has_nav_menu( apply_filters( 'thematic_primary_menu_id', 'primary-menu' ) ) ) ) {
-            echo  wp_nav_menu(thematic_nav_menu_args());
+            echo  wp_nav_menu( thematic_nav_menu_args () );
         } else {
             echo  thematic_add_menuclass( wp_page_menu( thematic_page_menu_args () ) );
         }
@@ -186,11 +199,11 @@ function childtheme_override_nav_above() {
 function childtheme_override_nav_below() {
     if ( !is_single() ) { ?>
         <nav id="nav-below" class="navigation" role="navigation">
-            <?php if(function_exists('wp_pagenavi')) {
+            <?php if ( function_exists( 'wp_pagenavi' ) ) {
                 wp_pagenavi();
             } else { ?>
-                <div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
-                <div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+                <div class="nav-previous"><?php next_posts_link( sprintf ('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+                <div class="nav-next"><?php previous_posts_link( sprintf ('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
             <?php } ?>
         </nav>
     <?php }
@@ -205,7 +218,7 @@ function childtheme_override_nav_below() {
  *
  */
 
-function childtheme_post_thumb_size($size) {
+function childtheme_post_thumb_size( $size ) {
     $size = array(300,300);
     return $size;
 }
@@ -215,20 +228,20 @@ add_filter('thematic_post_thumb_size', 'childtheme_post_thumb_size');
  * Modify Widget Titles
  *
  * Thematic now inputs an H1 for the asides, in HTML5 this is ok, but SEO's will cringe.
- * I haven't really seen any data showing that using H1's is fine for search engines,
- * and from what I have seen no one has really been bold enough to jump on that band
- * wagon, so this reverts them back to H4's instead.
+ * I haven't really seen any data showing that using multiple H1's for what is essentially
+ * aside or off topic is fine for search engines, and from what I have seen no one has
+ * really been bold enough to jump on that bandwagon, so this reverts them back to H5's instead.
  *
  */
 
 function childtheme_before_widgettitle( $content ) {
-    $content = "<h4 class=\"widgettitle\">";
+    $content = "<h5 class=\"widgettitle\">";
     return $content;
 }
 add_filter( 'thematic_before_title', 'childtheme_before_widgettitle');
 
 function childtheme_after_widgettitle( $content ) {
-    $content = "</h4>\n";
+    $content = "</h5>\n";
     return $content;
 }
 add_filter( 'thematic_after_title', 'childtheme_after_widgettitle');
@@ -238,16 +251,16 @@ add_filter( 'thematic_after_title', 'childtheme_after_widgettitle');
  *
  * This is pretty much required for responsive sites, you can set it with CSS, but this
  * is a backup to make sure the box isn't super big. Also the second function allows you
- * to change the text, the default text is stupid, "Type to search and hit enter" or
+ * to change the text, the default text is sub optimal, "Type to search and hit enter" or
  * something like that, way too long.
  *
  */
 
 // shorten the input box length
-function childtheme_thematic_search_form_length() {
+function childtheme_search_form_length() {
     return "16";
 }
-add_filter('thematic_search_form_length', 'childtheme_thematic_search_form_length');
+add_filter('thematic_search_form_length', 'childtheme_search_form_length');
 
 // change the default search box text
 function childtheme_search_field_value() {
