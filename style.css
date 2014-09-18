@@ -6,7 +6,7 @@ Author: Scott Nix
 Author URI: http://scottnix.com/
 Template: thematic
 Version: 0.1.0
-Tags: thematic, child, responsive
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, full-width-template, responsive-layout
 */
 /* ==========================================================================
    basic element styles (headings, links, etc.)
@@ -284,9 +284,6 @@ td {
 
 @media (min-width: 50em) {
   .site-header {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 100%;
     float: left;
     padding-left: 2.08333%;
@@ -296,9 +293,6 @@ td {
 
 @media (min-width: 50em) {
   .content-wrapper {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 66.66667%;
     float: left;
     padding-left: 2.08333%;
@@ -309,9 +303,6 @@ td {
 @media (min-width: 50em) {
   .primary-aside,
   .secondary-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 33.33333%;
     float: right;
     padding-left: 2.08333%;
@@ -333,9 +324,6 @@ td {
   .first-sub-aside,
   .second-sub-aside,
   .third-sub-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 33.33333%;
     float: left;
     padding-left: 2.08333%;
@@ -344,9 +332,6 @@ td {
 }
 
 [id="siteinfo"] {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   width: 100%;
   float: left;
   padding-left: 2.08333%;
@@ -363,9 +348,6 @@ td {
 
 @media (min-width: 50em) {
   .left-sidebar .content-wrapper {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 66.66667%;
     float: right;
     padding-left: 2.08333%;
@@ -375,9 +357,6 @@ td {
 @media (min-width: 50em) {
   .left-sidebar .primary-aside,
   .left-sidebar .secondary-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 33.33333%;
     float: left;
     padding-left: 2.08333%;
@@ -388,9 +367,6 @@ td {
 
 @media (min-width: 30em) {
   .full-width .content-wrapper {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 100%;
     float: left;
     padding-left: 2.08333%;
@@ -401,9 +377,6 @@ td {
 }
 @media (min-width: 50em) {
   .full-width .content-wrapper {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 100%;
     float: left;
     padding-left: 2.08333%;
@@ -415,9 +388,6 @@ td {
 
 @media (min-width: 50em) {
   .three-columns .content-wrapper {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 50%;
     float: left;
     padding-left: 2.08333%;
@@ -426,9 +396,6 @@ td {
 }
 @media (min-width: 30em) {
   .three-columns .primary-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 50%;
     float: left;
     padding-left: 2.08333%;
@@ -437,9 +404,6 @@ td {
 }
 @media (min-width: 50em) {
   .three-columns .primary-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 25%;
     float: left;
     padding-left: 2.08333%;
@@ -448,9 +412,6 @@ td {
 }
 @media (min-width: 30em) {
   .three-columns .secondary-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 50%;
     float: right;
     padding-left: 2.08333%;
@@ -459,9 +420,6 @@ td {
 }
 @media (min-width: 50em) {
   .three-columns .secondary-aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 25%;
     float: right;
     padding-left: 2.08333%;
