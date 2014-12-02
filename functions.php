@@ -22,7 +22,7 @@ add_theme_support( 'thematic_html5' );
  */
 
 function childtheme_remove_superfish(){
-    remove_theme_support('thematic_superfish');
+  remove_theme_support('thematic_superfish');
  }
 add_action('wp_enqueue_scripts','childtheme_remove_superfish', 9);
 
@@ -37,16 +37,16 @@ add_action('wp_enqueue_scripts','childtheme_remove_superfish', 9);
  */
 
 function childtheme_script_manager() {
-    // wp_register_script template ( $handle, $src, $deps, $ver, $in_footer );
+  // wp_register_script template ( $handle, $src, $deps, $ver, $in_footer );
 
-    // registers modernizr script, childtheme path, no dependency, no version, loads in header
-    wp_register_script('modernizr-js', get_stylesheet_directory_uri() . '/js/modernizr.js', false, false, false);
-    // registers misc custom script, childtheme path, yes dependency is jquery, no version, loads in footer
-    wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
+  // registers modernizr script, childtheme path, no dependency, no version, loads in header
+  wp_register_script('modernizr-js', get_stylesheet_directory_uri() . '/js/modernizr.js', false, false, false);
+  // registers misc custom script, childtheme path, yes dependency is jquery, no version, loads in footer
+  wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
 
-    // enqueue the scripts for use in theme
-    wp_enqueue_script ('modernizr-js');
-    wp_enqueue_script('custom-js');
+  // enqueue the scripts for use in theme
+  wp_enqueue_script ('modernizr-js');
+  wp_enqueue_script('custom-js');
 }
 add_action('wp_enqueue_scripts', 'childtheme_script_manager');
 
@@ -58,8 +58,8 @@ add_action('wp_print_styles', 'childtheme_deregister_styles', 100);
 
 // deregister scripts
 function childtheme_deregister_scripts() {
-    // removes themaitc-js which has more superfish scripts
-    wp_dequeue_script('thematic-js');
+  // removes themaitc-js which has more superfish scripts
+  wp_dequeue_script('thematic-js');
 }
 add_action( 'wp_print_scripts', 'childtheme_deregister_scripts', 100 );
 
@@ -75,8 +75,8 @@ add_action( 'wp_print_scripts', 'childtheme_deregister_scripts', 100 );
  */
 
 function childtheme_html_class( $class_att ) {
-    $class_att = "no-js";
-    return $class_att;
+  $class_att = "no-js";
+  return $class_att;
 }
 add_filter( 'thematic_html_class', 'childtheme_html_class' );
 
@@ -130,8 +130,8 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
  */
 
 function childtheme_register_menus() {
-    register_nav_menu('secondary-menu', 'Secondary Menu');
-    register_nav_menu('tertiary-menu', 'Tertiary Menu');
+  register_nav_menu('secondary-menu', 'Secondary Menu');
+  register_nav_menu('tertiary-menu', 'Tertiary Menu');
 }
 add_action('thematic_child_init', 'childtheme_register_menus');
 
@@ -142,18 +142,29 @@ add_action('thematic_child_init', 'childtheme_register_menus');
  * if you aren't using the widgets, no point in looking at them or having to explain why
  * they are there.
  *
+ * update: 0.1.1 no longer hidding widget areas that are not often used by default, tech
+ * savvy pepole (who dig into the php) weren't aware they are an option.
  */
 
 function childtheme_hide_areas( $content ) {
-    unset( $content['Index Top'] );
-    unset( $content['Index Insert'] );
-    unset( $content['Index Bottom'] );
-    unset( $content['Single Top'] );
-    unset( $content['Single Insert'] );
-    unset( $content['Single Bottom'] );
-    unset( $content['Page Top'] );
-    unset( $content['Page Bottom'] );
-    return $content;
+
+  // often used
+  // unset( $content['Primary Aside'] );
+  // unset( $content['Secondary Aside'] );
+  // unset( $content['1st Subsidiary Aside'] );
+  // unset( $content['2nd Subsidiary Aside'] );
+  // unset( $content['3rd Subsidiary Aside'] );
+
+  // not often used
+  // unset( $content['Index Top'] );
+  // unset( $content['Index Insert'] );
+  // unset( $content['Index Bottom'] );
+  // unset( $content['Single Top'] );
+  // unset( $content['Single Insert'] );
+  // unset( $content['Single Bottom'] );
+  // unset( $content['Page Top'] );
+  // unset( $content['Page Bottom'] );
+  return $content;
 }
 add_filter('thematic_widgetized_areas', 'childtheme_hide_areas');
 
@@ -168,18 +179,18 @@ add_filter('thematic_widgetized_areas', 'childtheme_hide_areas');
  */
 
 function childtheme_override_access() {
-    ?>
-    <div id="access" role="navigation">
-        <a class="menu-toggle" href="#">Menu</a>
-        <?php
-        if ( ( function_exists( 'has_nav_menu' ) ) && ( has_nav_menu( apply_filters( 'thematic_primary_menu_id', 'primary-menu' ) ) ) ) {
-            echo  wp_nav_menu( thematic_nav_menu_args () );
-        } else {
-            echo  thematic_add_menuclass( wp_page_menu( thematic_page_menu_args () ) );
-        }
-        ?>
-    </div><!-- #access -->
+  ?>
+  <div id="access" role="navigation">
+    <a class="menu-toggle" href="#">Menu</a>
     <?php
+    if ( ( function_exists( 'has_nav_menu' ) ) && ( has_nav_menu( apply_filters( 'thematic_primary_menu_id', 'primary-menu' ) ) ) ) {
+      echo  wp_nav_menu( thematic_nav_menu_args () );
+    } else {
+      echo  thematic_add_menuclass( wp_page_menu( thematic_page_menu_args () ) );
+    }
+    ?>
+  </div><!-- #access -->
+  <?php
 }
 
 /**
@@ -197,16 +208,16 @@ function childtheme_override_nav_above() {
 }
 
 function childtheme_override_nav_below() {
-    if ( !is_single() ) { ?>
-        <nav id="nav-below" class="navigation" role="navigation">
-            <?php if ( function_exists( 'wp_pagenavi' ) ) {
-                wp_pagenavi();
-            } else { ?>
-                <div class="nav-previous"><?php next_posts_link( sprintf ('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
-                <div class="nav-next"><?php previous_posts_link( sprintf ('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
-            <?php } ?>
-        </nav>
-    <?php }
+  if ( !is_single() ) { ?>
+    <nav id="nav-below" class="navigation" role="navigation">
+      <?php if ( function_exists( 'wp_pagenavi' ) ) {
+        wp_pagenavi();
+      } else { ?>
+        <div class="nav-previous"><?php next_posts_link( sprintf ('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+        <div class="nav-next"><?php previous_posts_link( sprintf ('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+      <?php } ?>
+    </nav>
+  <?php }
 }
 
 /**
@@ -219,8 +230,8 @@ function childtheme_override_nav_below() {
  */
 
 function childtheme_post_thumb_size( $size ) {
-    $size = array(300,300);
-    return $size;
+  $size = array(300,300);
+  return $size;
 }
 add_filter('thematic_post_thumb_size', 'childtheme_post_thumb_size');
 
@@ -235,14 +246,14 @@ add_filter('thematic_post_thumb_size', 'childtheme_post_thumb_size');
  */
 
 function childtheme_before_widgettitle( $content ) {
-    $content = "<h5 class=\"widgettitle\">";
-    return $content;
+  $content = "<h5 class=\"widgettitle\">";
+  return $content;
 }
 add_filter( 'thematic_before_title', 'childtheme_before_widgettitle');
 
 function childtheme_after_widgettitle( $content ) {
-    $content = "</h5>\n";
-    return $content;
+  $content = "</h5>\n";
+  return $content;
 }
 add_filter( 'thematic_after_title', 'childtheme_after_widgettitle');
 
@@ -258,12 +269,12 @@ add_filter( 'thematic_after_title', 'childtheme_after_widgettitle');
 
 // shorten the input box length
 function childtheme_search_form_length() {
-    return "16";
+  return "16";
 }
 add_filter('thematic_search_form_length', 'childtheme_search_form_length');
 
 // change the default search box text
 function childtheme_search_field_value() {
-    return "Search";
+  return "Search";
 }
 add_filter('search_field_value', 'childtheme_search_field_value');

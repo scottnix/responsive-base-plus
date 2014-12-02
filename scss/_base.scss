@@ -47,13 +47,13 @@ $selection-color: #f1f1f1;
 
 // media query breakpoint mixin - scottnix.com/placement-of-media-queries/
 @mixin breakpoint($point) {
-    @if $point == medium {
-        @media (min-width: 30em)  { @content; }
-    }
-    @else if $point == large {
-        @media (min-width: 50em) { @content; }
-    }
-    @else if $point { // allows custom breakpoints
-        @media (min-width: $point) { @content; }
-    }
+  @if $point == medium {
+    @media (min-width: 30em)  { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point { // allows custom breakpoints
+    @media (min-width: $point) { @content; }
+  }
 }

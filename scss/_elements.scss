@@ -1,210 +1,210 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-    margin: 0;
-    overflow-y: scroll;
-    background: $body-background;
-    font-family: $body-font;
-    font-size: 100%;
-    color: $body-color;
-    line-height: 1.625;
+  margin: 0;
+  overflow-y: scroll;
+  background: $body-background;
+  font-family: $body-font;
+  font-size: 100%;
+  color: $body-color;
+  line-height: 1.625;
 
-    @include breakpoint(medium) {
-        font-size: 105%;
-    }
-    @include breakpoint(large) {
-        font-size: 110%;
-    }
+  @include breakpoint(medium) {
+    font-size: 105%;
+  }
+  @include breakpoint(large) {
+    font-size: 110%;
+  }
 }
 h1 {
-    margin: 0 0 0.5417em;
-    font-family: $header-font;
-    font-size: 2.25em;
-    line-height: 1.0833em;
+  margin: 0 0 0.5417em;
+  font-family: $header-font;
+  font-size: 2.25em;
+  line-height: 1.0833em;
 }
 h2 {
-    margin: 0 0 0.7222em;
-    font-family: $header-font;
-    font-size: 1.875em;
-    line-height: 1.4444em;
+  margin: 0 0 0.7222em;
+  font-family: $header-font;
+  font-size: 1.875em;
+  line-height: 1.4444em;
 }
 h3 {
-    margin: 0 0 0.8667em;
-    font-family: $header-font;
-    font-size: 1.5em;
-    line-height: 1.7333em;
+  margin: 0 0 0.8667em;
+  font-family: $header-font;
+  font-size: 1.5em;
+  line-height: 1.7333em;
 }
 h4 {
-    margin: 0 0 1.0833em;
-    font-family: $header-font;
-    font-size: 1.375em;
-    line-height: 1.0833em;
+  margin: 0 0 1.0833em;
+  font-family: $header-font;
+  font-size: 1.375em;
+  line-height: 1.0833em;
 }
 h5 {
-    margin: 0 0 1.1818em;
-    font-family: $header-font;
-    font-size: 1.125em;
-    line-height: 1.1818em;
+  margin: 0 0 1.1818em;
+  font-family: $header-font;
+  font-size: 1.125em;
+  line-height: 1.1818em;
 }
 h6 {
-    margin: 0 0 1.4444em;
-    font-family: $header-font;
-    font-size: 1em;
-    line-height: 1.4444em;
+  margin: 0 0 1.4444em;
+  font-family: $header-font;
+  font-size: 1em;
+  line-height: 1.4444em;
 }
 a {
-    background: transparent;
+  background: transparent;
+  color: $link-color;
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+  &:visited {
     color: $link-color;
-    text-decoration: none;
-    transition: all .5s ease-in-out;
-    &:visited {
-        color: $link-color;
-    }
-    &:focus {
-        color: $link-focus;
-        outline: thin dotted;
-    }
-    &:active,
-    &:hover {
-        color: $link-hover;
-    }
+  }
+  &:focus {
+    color: $link-focus;
+    outline: thin dotted;
+  }
+  &:active,
+  &:hover {
+    color: $link-hover;
+  }
 }
 img {
-    border: 0;
+  border: 0;
 }
 p,
 address,
 figure,
 embed,
 iframe {
-    margin: 0 0 $spacing;
+  margin: 0 0 $spacing;
 }
 ul {
-    margin: 0 0 $spacing;
-    list-style: disc;
+  margin: 0 0 $spacing;
+  list-style: disc;
 }
 ol {
-    margin: 0 0 $spacing;
-    list-style-type: decimal;
+  margin: 0 0 $spacing;
+  list-style-type: decimal;
+  ol {
+    list-style: upper-alpha;
     ol {
-        list-style: upper-alpha;
-        ol {
-            list-style: lower-roman;
-            ol {
-                list-style: lower-alpha;
-            }
-        }
+      list-style: lower-roman;
+      ol {
+        list-style: lower-alpha;
+      }
     }
+  }
 }
 ul ul,
 ul ol,
 ol ul,
 ol ol {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 dl {
-    margin: 0 $spacing-beta;
+  margin: 0 $spacing-beta;
 }
 dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 dd {
-    margin: 0 0 $spacing;
+  margin: 0 0 $spacing;
 }
 b,
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 abbr[title],
 acronym {
-    cursor: help;
-    border-bottom: thin dotted;
+  cursor: help;
+  border-bottom: thin dotted;
 }
 dfn {
-    font-style: italic;
+  font-style: italic;
 }
 ins {
-    border-bottom: thin solid $accent-color;
-    text-decoration: none;
+  border-bottom: thin solid $accent-color;
+  text-decoration: none;
 }
 caption {
-    text-align: center;
+  text-align: center;
 }
 blockquote {
-    margin: 0 0 $spacing;
-    p {
-        padding: $spacing-beta 0 $spacing-beta $spacing-beta;
-        border-left: thick solid $accent-color;
-    }
+  margin: 0 0 $spacing;
+  p {
+    padding: $spacing-beta 0 $spacing-beta $spacing-beta;
+    border-left: thick solid $accent-color;
+  }
 }
 q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
-    &:before {
-        content: open-quote;
-    }
-    &:after {
-        content: close-quote;
-    }
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
 }
 code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 code {
 }
 pre {
-    overflow: auto;
-    margin: 0 0 $spacing;
-    white-space: pre-wrap;
+  overflow: auto;
+  margin: 0 0 $spacing;
+  white-space: pre-wrap;
 }
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 hr {
-    height: 0;
-    margin: 0 0 $spacing;
+  height: 0;
+  margin: 0 0 $spacing;
 }
 table {
-    margin: 0 0 $spacing;
-    border: thin solid $accent-color;
-    border-width: thin thin 0;
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-align: left;
+  margin: 0 0 $spacing;
+  border: thin solid $accent-color;
+  border-width: thin thin 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
 }
 tr {
-    border-bottom: thin solid $accent-color;
+  border-bottom: thin solid $accent-color;
 }
 th,
 td {
-    padding: $spacing-alpha;
-    vertical-align: top;
+  padding: $spacing-alpha;
+  vertical-align: top;
 }
 ::selection {
-    background: $selection-background;
-    color: $selection-color;
-    text-shadow: none;
+  background: $selection-background;
+  color: $selection-color;
+  text-shadow: none;
 }

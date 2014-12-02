@@ -5,7 +5,7 @@ Description: Responsive Base Plus for Thematic 2.0.
 Author: Scott Nix
 Author URI: http://scottnix.com/
 Template: thematic
-Version: 0.1.0
+Version: 0.1.1
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, full-width-template, responsive-layout
 */
 
@@ -39,37 +39,37 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, full-
    ========================================================================== */
 
 .site-title {
-    @extend h2;
-    margin: 0;
-    padding: 0;
+  @extend h2;
+  margin: 0;
+  padding: 0;
 }
 .tagline {
-    margin: 0;
-    font-family: $body-font;
-    font-size: 100%;
-    font-weight: normal;
-    line-height: $spacing;
+  margin: 0;
+  font-family: $body-font;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: $spacing;
 }
 .content-wrapper {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .post {
-    margin: 0 0 $spacing;
-    padding: 0 0 $spacing-delta;
+  margin: 0 0 $spacing;
+  padding: 0 0 $spacing-delta;
 }
 .page-title {
-    @extend h6;
+  @extend h6;
 }
 .entry-title {
-    @extend h1;
+  @extend h1;
 }
 .entry-meta {
-    margin: 0 0 $spacing;
+  margin: 0 0 $spacing;
 }
 .sticky {
-    padding: $spacing;
-    background: $transparency-medium;
+  padding: $spacing;
+  background: $transparency-medium;
 }
 
 /* asides, sidebars & widget-ready areas
@@ -122,11 +122,11 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, full-
    ========================================================================== */
 
 @media print {
-    @import 'print-styles';
+  @import 'print-styles';
 
-    // custom additions
-    [id="access"],
-    .aside {
-        display: none;
-    }
+  // custom additions
+  [id="access"],
+  .aside {
+    display: none;
+  }
 }

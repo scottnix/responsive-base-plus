@@ -1,98 +1,98 @@
 .comments {
-    @extend %clearfix;
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    ol {
-        padding: 0;
-        list-style: none;
-    }
+  @extend %clearfix;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin: 0 0 $spacing;
+    padding-top: $spacing;
+    border: none;
     li {
-        margin: 0 0 $spacing;
-        padding-top: $spacing;
-        border: none;
-        li {
-            padding-top: 0;
-        }
+      padding-top: 0;
     }
-    .children {
+  }
+  .children {
 
-        @include breakpoint(medium) {
-            padding-left: $spacing;
-            border-left: thick solid $accent-color;
-        }
+    @include breakpoint(medium) {
+      padding-left: $spacing;
+      border-left: thick solid $accent-color;
     }
-    .children .children {
-        border: none;
-        padding: 0;
-    }
+  }
+  .children .children {
+    border: none;
+    padding: 0;
+  }
 }
 
 .comment {
-    .url {
-    }
+  .url {
+  }
 }
 .bypostauthor {
  }
 .avatar {
-    float: left;
-    margin: 0 $spacing-alpha $spacing-beta 0;
-    border: thick solid $accent-color;
+  float: left;
+  margin: 0 $spacing-alpha $spacing-beta 0;
+  border: thick solid $accent-color;
 }
 .comment-author {
-    font-weight: bold;
+  font-weight: bold;
 }
 .comment-meta {
 }
 .comment-content {
-    clear: both;
-    a {
-        border-bottom: thin dotted $accent-color;
-    }
+  clear: both;
+  a {
+    border-bottom: thin dotted $accent-color;
+  }
 }
 .comment-replylink {
-    text-align: right;
-    a {
-        padding: $spacing-alpha;
-    }
+  text-align: right;
+  a {
+    padding: $spacing-alpha;
+  }
 }
 .comment-respond {
-    @extend %clearfix;
+  @extend %clearfix;
 }
 .comment-notes {
-    @extend %visuallyhidden;
+  @extend %visuallyhidden;
 }
 .pings {
-    margin-bottom: $spacing;
-    .comment-author {
-        font-weight: normal;
-    }
-    .comment-content {
-        @extend %visuallyhidden;
-    }
+  margin-bottom: $spacing;
+  .comment-author {
+    font-weight: normal;
+  }
+  .comment-content {
+    @extend %visuallyhidden;
+  }
 }
 .comment-reply-title {
-    position: relative;
+  position: relative;
 }
 [id="cancel-comment-reply-link"] {
-    float: right;
-    font-weight: normal;
+  float: right;
+  font-weight: normal;
 }
 .form-section {
-    input {
-        width: 100%;
-        margin: 0 0 $spacing;
-    }
-    textarea {
-        width: 100%;
-    }
+  input {
+    width: 100%;
+    margin: 0 0 $spacing;
+  }
+  textarea {
+    width: 100%;
+  }
 }
 [id="form-allowed-tags"] {
-    @extend %visuallyhidden;
+  @extend %visuallyhidden;
 }
 .form-submit {
-    padding: $spacing 0 0;
-    text-align: right;
+  padding: $spacing 0 0;
+  text-align: right;
 }
