@@ -1,3 +1,4 @@
 .sass-cache
 *.txt
 node_modules/
+*.log
