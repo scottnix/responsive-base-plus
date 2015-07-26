@@ -21,7 +21,7 @@ add_theme_support( 'thematic_html5' );
  *
  */
 
-function childtheme_remove_superfish(){
+function childtheme_remove_superfish() {
   remove_theme_support('thematic_superfish');
  }
 add_action('wp_enqueue_scripts','childtheme_remove_superfish', 9);
