@@ -3,9 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    livereload = require('gulp-livereload'),
-    lr = require('tiny-lr'),
-    server = lr();
+    livereload = require('gulp-livereload');
 
 // Styles
 gulp.task('styles', function() {
@@ -17,19 +15,13 @@ gulp.task('styles', function() {
       browsers: ['last 2 versions']
     }))
     .pipe(gulp.dest(''))
-    .pipe(livereload(server))
+    .pipe(livereload());
 });
 
 // Watch
 gulp.task('watch', function() {
-  // Listen on port 35729
-  server.listen(35729, function (err) {
-    if (err) {
-      return console.log(err);
-    }
-  // Watch .scss files
+  livereload.listen();
   gulp.watch('scss/**/*.scss', ['styles']);
-  });
 });
 
 // Default Tasks
